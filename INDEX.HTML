@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="INDEX.CSS">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="input">
+            <div class="form">
+                <label for="input">Enter a Amount:</label>
+                <input type="number" id="bill" class="input-field" placeholder="Enter a number" min=" 0">
+            </div>
+            <div class="form">
+                <p>Select Tip %</p>
+                <div class="tip-buttons-container" style="display: flex; gap: 10px; padding-bottom: 15px; ">
+                    <button type="button" class="tip-percent-btn" onclick="document.getElementById('customTip').value=5">5%</button>
+                    <button type="button" class="tip-percent-btn" onclick="document.getElementById('customTip').value=10">10%</button>
+                    <button type="button" class="tip-percent-btn" onclick="document.getElementById('customTip').value=15">15%</button>
+                    <button type="button" class="tip-percent-btn" onclick="document.getElementById('customTip').value=20">20%</button>
+                    <button type="button" class="tip-percent-btn" onclick="document.getElementById('customTip').value=25">25%</button>
+                    <button type="button" class="tip-percent-btn" onclick="document.getElementById('customTip').value=50">50%</button>
+                    <input type="number" id="customTip" class="input-field" placeholder="Custom Tip %" min="0">
+                </div>
+            </div>
+            <div class="form">
+                <label for="num-people">Number of People</label>
+                <input type="number" id="people" class="input-field" placeholder="1" min="1">
+            </div>
+        </div>
+
+
+
+
+        <div class="enter-btn">
+            <button class="btn" onclick="calculate()">Enter</button>
+        </div>
+
+
+
+
+        <div class="output-section">
+
+            <div class="output-item" style="display: flex; gap: 90px; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+                <p>Tip Amount: <span id="tip-amount">0.00</span></p>
+                <p>Total Amount: <span id="total-amount">0.00</span></p>
+                <p>Tip per Person: <span id="tip-amount-person">0.00</span></p>
+                <p>Total per Person: <span id="total-amount-person">0.00</span></p>
+            </div>
+        </div>
+
+        <button id="reset-btn" class="reset-btn" onclick="reset()">Reset</button>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
